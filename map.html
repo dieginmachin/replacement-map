@@ -1,1 +1,88 @@
-<!doctype html><title>Replacement Map</title><p>Loading</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Replacement Map · Hall of Templates</title>
+<meta name="description" content="The 8 internal tools, what each one replaced, and Workshop 01: The Auto Sorter.">
+<meta name="robots" content="noindex">
+<meta name="cf-page-token" content="cfp_P7Gb7aTCC70Se3ira7JpdIM6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<link rel="stylesheet" href="rm.css">
+<script src="rm.js"></script>
+</head>
+<body>
+<header class="wrap bar">
+  <a class="who" href="#top"><span class="mark" aria-hidden="true"></span>Hall of Templates <span>· The Replacement Map</span></a>
+  <a class="chip" href="#ws01">Workshop 01</a>
+</header>
+
+<main id="top">
+  <section class="wrap rv" style="padding-block:64px 24px">
+    <p class="lab"><b>Your map</b> · 8 tools · what each one replaced</p>
+    <h1 style="margin-top:20px;font-size:clamp(40px,6vw,72px)">Here it is, <em data-n="friend">friend</em>.</h1>
+    <p class="lead">Eight tools. Each one took a job I used to do by hand. Read them in order: every tool after 01 assumes the one before it exists.</p>
+    <div class="map" id="map"></div>
+  </section>
+
+  <section class="sec" id="ws01">
+    <div class="wrap two">
+      <div>
+        <p class="lab"><b>Workshop 01</b> · The Auto Sorter</p>
+        <h2 style="margin-top:16px">The map is the syllabus. <em>Tool 01 is where it starts.</em></h2>
+        <p class="lead">Every tool on this map gets its own workshop. Workshop 01 is the Auto Sorter, because nothing else on the map works until your library can be found in 4 seconds.</p>
+        <ol class="steps">
+          <li>Sort any Figma email library by brand, flow, category, language and year, on one canvas.</li>
+          <li>Name layers so the sort holds every time the library grows.</li>
+          <li>Turn the sorted library into the source every other tool reads from.</li>
+        </ol>
+      </div>
+      <div class="gif"><img src="media/sorter.gif" alt="The Auto Sorter: connect a file, every email lands sorted" width="1200" height="675" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap two" style="align-items:start">
+      <div class="card offer">
+        <p class="lab"><b>Workshop 01</b> · recorded · Auto-Sorter Pro included</p>
+        <div class="price">$97 <small>one time</small></div>
+        <ul class="ticks">
+          <li>The recorded Auto Sorter workshop, in 8 short chapters</li>
+          <li>Auto-Sorter Pro: every file, every page, no limits</li>
+          <li>The naming rules that keep the sort clean</li>
+          <li>A 7 day challenge to sort your whole library</li>
+        </ul>
+        <a class="btn go" href="https://www.halloftemplates.com/sorter-pro" id="buy">Get Workshop 01<small>$97</small></a>
+        <p class="fine">Just want the tool? Pro alone is $29 on the same page.</p>
+      </div>
+      <div class="card offer">
+        <p class="lab"><b>Not ready?</b> · start free</p>
+        <h3 style="font:300 34px/1.1 var(--display)">Sort one file tonight, free.</h3>
+        <p class="fine" style="font-size:16px;color:var(--ink-2)">The free Auto-Sorter does one Figma file on one canvas. Paste a link, watch it fall into place. Then answer the three questions from the thread: that is your next tool.</p>
+        <a class="btn line" href="https://www.halloftemplates.com/sorter">Try the free sorter<small>2 minutes</small></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft"><div class="wrap"><span class="lab">© Hall of Templates · Reply to any email, I read them all</span><span class="lab">Let the intern go first · DG</span></div></footer>
+
+<script>
+(function () {
+  var box = document.getElementById('map');
+  RM.TOOLS.forEach(function (t, i) {
+    var d = document.createElement('div');
+    d.className = 'tool card' + (i === 0 ? ' one' : '');
+    d.innerHTML = '<span class="n">TOOL ' + t.n + ' / 08</span><h3>' + t.name + '</h3><s>' + t.cut + '</s><p class="what">' + t.what + '</p>' + (t.ws ? '<a class="tag" href="#ws01">' + t.ws + '</a>' : '');
+    box.appendChild(d);
+  });
+  // carry the lead source to the offer page for attribution
+  var b = document.getElementById('buy');
+  b.href += '?utm_source=x&utm_medium=replacement-map&utm_content=' + encodeURIComponent(RM.from);
+})();
+</script>
+<script src="https://sdk.myclickfunnels.com/sdk.js" defer></script>
+</body>
+</html>

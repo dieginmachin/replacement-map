@@ -1,1 +1,79 @@
-<!doctype html><title>Replacement Map</title><p>Loading</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Replacement Map · Hall of Templates</title>
+<meta name="description" content="8 internal tools that replaced the expensive parts of an email design studio, what each one took, and the first one to build tonight. Free.">
+<meta name="cf-page-token" content="cfp_HrjxlqocGjTRkj4RpLGaRm4b">
+<meta property="og:title" content="The Replacement Map">
+<meta property="og:description" content="8 tools that replaced my own design studio. What each one took. The first one to build tonight.">
+<meta property="og:image" content="https://dieginmachin.github.io/replacement-map/media/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<link rel="stylesheet" href="rm.css">
+<script src="rm.js"></script>
+</head>
+<body>
+<header class="wrap bar">
+  <a class="who" href="#top"><span class="mark" aria-hidden="true"></span>Hall of Templates <span>· The Replacement Map</span></a>
+  <a class="chip" href="#get">Get the map</a>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <section class="rv">
+      <p class="hi" data-hi></p>
+      <p class="lab"><b>Free</b> · 8 tools · 2,705 emails for 102 brands this year</p>
+      <h1 style="margin-top:20px">The 8 tools that replaced my own <em>design studio.</em></h1>
+      <p class="lead" data-hook>Each one took a job I used to do by hand. Here is every tool, what it replaced, and the first one I would build if I started from zero tonight.</p>
+      <div class="map" aria-label="Preview of the map. Tool 01 is open, the rest unlock after you sign up." id="preview"></div>
+    </section>
+
+    <form class="form card rv" id="get" aria-labelledby="getH">
+      <p class="lab"><b>Free</b> · instant</p>
+      <h2 id="getH">Where should I send the map?</h2>
+      <div class="f"><label for="first">First name</label><input id="first" name="first_name" data-cf-element="first-name" autocomplete="given-name" placeholder="First name" required></div>
+      <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" data-cf-element="email" autocomplete="email" placeholder="you@studio.com" required></div>
+      <input type="hidden" name="lead_source" data-cf-element="custom-attribute:lead_source" data-src="from">
+      <input type="hidden" name="lead_keyword" data-cf-element="custom-attribute:lead_keyword" data-src="k">
+      <button class="btn go" type="submit">Open the map<small>Free · 2 min read</small></button>
+      <p class="fine">You get the map on the next screen, plus a few short emails on building internal tools. Unsubscribe any time.</p>
+    </form>
+  </div>
+
+  <section class="sec">
+    <div class="wrap two">
+      <div>
+        <p class="lab"><b>Why a map</b> · not a prompt library</p>
+        <h2 style="margin-top:16px">The first job you replace is the one you <em>never called a job.</em></h2>
+        <ol class="steps">
+          <li>Every tool on the map started as a chore that never made it onto an invoice.</li>
+          <li>Each one is a set of rules a machine now checks every time, not a prompt you retype.</li>
+          <li>Each tool gets its own workshop. Workshop 01 is the Auto Sorter.</li>
+        </ol>
+      </div>
+      <div class="gif"><img src="media/friday.gif" alt="Before and after: five years of Friday sorting replaced by the Auto Sorter" width="1200" height="675" loading="lazy"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft"><div class="wrap"><span class="lab">© Hall of Templates · @diegogarzam</span><a class="lab" href="https://www.halloftemplates.com/sorter">Free Auto-Sorter</a></div></footer>
+
+<script>
+(function () {
+  var box = document.getElementById('preview');
+  RM.TOOLS.forEach(function (t, i) {
+    var d = document.createElement('div');
+    d.className = 'tool card' + (i === 0 ? ' one' : ' locked');
+    d.innerHTML = '<span class="n">TOOL ' + t.n + ' / 08</span><h3>' + t.name + '</h3><s>' + t.cut + '</s>' + (i === 0 ? '<span class="tag">Open now</span>' : '');
+    if (i) d.setAttribute('aria-hidden', 'true');
+    box.appendChild(d);
+  });
+})();
+</script>
+<script src="https://sdk.myclickfunnels.com/sdk.js" defer></script>
+</body>
+</html>

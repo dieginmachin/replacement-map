@@ -1,0 +1,71 @@
+/* Replacement Map · Hall of Templates Studio Apps. Same paper, ink and type as the Auto-Sorter pages.
+   Red = what a tool replaces (struck), green = the way in. */
+:root{--paper:#E9E5DE;--sheet:#F7F5F0;--white:#FFFDF9;--ink:#161614;--ink-2:#4E4C47;--ink-3:#86837C;--rule:#CBC6BC;--rule-2:#DCD8CF;--go:#17904F;--go-2:#127A42;--go-bg:#E3EDE4;--cut:#C8333B;--cut-bg:#F6E1E1;
+  --display:"Newsreader","Iowan Old Style",Georgia,serif;--sans:"Geist","Helvetica Neue",Arial,sans-serif;--mono:"Geist Mono","IBM Plex Mono",ui-monospace,Menlo,monospace;--ease:cubic-bezier(.22,1,.36,1);color-scheme:light}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:300;letter-spacing:-.02em;line-height:1.03;margin:0;text-wrap:balance}
+h1 em,h2 em{font-style:italic}
+p{margin:0}
+:focus-visible{outline:2px solid var(--go);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.lab{font:500 11px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.lab b{color:var(--ink);font-weight:500}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px;border-bottom:1px solid var(--rule)}
+.who{display:flex;align-items:center;gap:10px;text-decoration:none;font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.who span{color:var(--ink-3)}
+.mark{width:20px;height:20px;flex:none;background:linear-gradient(var(--ink),var(--ink)) 0 0/8px 11px no-repeat,linear-gradient(var(--ink),var(--ink)) 12px 0/8px 7px no-repeat,linear-gradient(var(--ink),var(--ink)) 12px 10px/8px 10px no-repeat,linear-gradient(var(--go),var(--go)) 0 14px/8px 6px no-repeat}
+.chip{display:inline-flex;align-items:center;gap:7px;font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);border-radius:99px;padding:8px 13px;text-decoration:none;white-space:nowrap}
+.btn{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;background:var(--ink);color:var(--sheet);text-decoration:none;font:500 13px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;border-radius:99px;padding:19px 24px;border:1px solid var(--ink);cursor:pointer;transition:transform .25s var(--ease),background-color .2s;text-align:left}
+.btn small{font:400 12px/1.2 var(--mono);letter-spacing:.04em;text-transform:none;color:#a9a69f}
+.btn:hover{transform:translateY(-1px)}
+.btn.go{background:var(--go);border-color:var(--go)}.btn.go small{color:#d4ead9}
+.btn.line{background:transparent;color:var(--ink)}.btn.line small{color:var(--ink-3)}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:18px}
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:start;padding-block:64px 72px}
+.hero h1{font-size:clamp(40px,6vw,76px)}
+.lead{font-size:19px;color:var(--ink-2);margin-top:22px;max-width:560px}
+.hi{display:none;font:400 italic 22px/1.3 var(--display);color:var(--ink-2);margin-bottom:18px}
+.hi.on{display:block}
+.form{padding:28px;display:grid;gap:16px;position:sticky;top:24px}
+.form h2{font-size:34px}
+.f{display:grid;gap:6px}
+.f label{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.f input{font:400 17px/1.2 var(--sans);padding:15px 16px;border:1px solid var(--rule);border-radius:12px;background:var(--sheet);color:var(--ink);width:100%}
+.f input:focus{outline:2px solid var(--go);outline-offset:0;border-color:var(--go)}
+.fine{font-size:13px;color:var(--ink-3)}
+/* the map */
+.map{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:34px}
+.tool{padding:16px;display:grid;gap:8px;align-content:start;min-width:0;position:relative}
+.tool .n{font:500 11px/1 var(--mono);letter-spacing:.1em;color:var(--ink-3)}
+.tool h3{font:500 17px/1.2 var(--sans);letter-spacing:0}
+.tool s{color:var(--cut);text-decoration-thickness:1.5px;font-size:14px}
+.tool .what{font-size:14px;color:var(--ink-2)}
+.tool.locked{color:transparent;text-shadow:0 0 9px rgba(22,22,20,.45);user-select:none}
+.tool.locked s{color:transparent;text-shadow:0 0 9px rgba(200,51,59,.5)}
+.tool.locked .n{color:var(--ink-3);text-shadow:none}
+.tool.one{border-color:var(--go);box-shadow:0 0 0 1px var(--go) inset}
+.tool .tag{justify-self:start;font:500 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;background:var(--go-bg);color:var(--go-2);border-radius:99px;padding:6px 9px}
+.sec{padding-block:72px;border-top:1px solid var(--rule)}
+.sec h2{font-size:clamp(34px,4.6vw,56px)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.gif{border-radius:14px;border:1px solid var(--rule);overflow:hidden;background:var(--sheet)}
+.steps{display:grid;gap:14px;margin-top:22px;padding:0;list-style:none;counter-reset:s}
+.steps li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;font-size:17px}
+.steps li::before{counter-increment:s;content:"0" counter(s);font:500 12px/1.9 var(--mono);color:var(--ink-3)}
+.offer{padding:32px;display:grid;gap:18px}
+.price{font:300 64px/1 var(--display);letter-spacing:-.03em}
+.price small{font:400 15px/1 var(--mono);color:var(--ink-3);letter-spacing:0}
+.ticks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.ticks li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;font-size:16px}
+.ticks li::before{content:"✓";color:var(--go);font-weight:600}
+.ft{border-top:1px solid var(--rule);padding-block:28px}
+.ft .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.rv{animation:rv .9s var(--ease) both}
+@keyframes rv{from{opacity:.001;transform:translateY(14px)}}
+@media (max-width:980px){.hero,.two{grid-template-columns:minmax(0,1fr);gap:36px}.form{position:static}.map{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.map{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.rv{animation:none}.btn{transition:none}}
