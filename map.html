@@ -24,6 +24,10 @@
     <p class="lab"><b>Your map</b> · 8 tools · what each one replaced</p>
     <h1 style="margin-top:20px;font-size:clamp(40px,6vw,72px)">Here it is, <em data-n="friend">friend</em>.</h1>
     <p class="lead">Eight tools. Each one took a job I used to do by hand. Read them in order: every tool after 01 assumes the one before it exists.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;max-width:640px">
+      <a class="btn go" style="width:auto;flex:1 1 260px" href="the-map.html">Open the full map<small>8 stations</small></a>
+      <a class="btn line" style="width:auto;flex:1 1 220px" href="Replacement-Map.pdf" download>Download the PDF<small>A4</small></a>
+    </div>
     <div class="map" id="map"></div>
   </section>
 
@@ -31,7 +35,7 @@
     <div class="wrap two">
       <div>
         <p class="lab"><b>Workshop 01</b> · The Auto Sorter</p>
-        <h2 style="margin-top:16px">The map is the syllabus. <em>Tool 01 is where it starts.</em></h2>
+        <h2 style="margin-top:16px">The map is the syllabus. <em>The Auto Sorter is the first replacer.</em></h2>
         <p class="lead">Every tool on this map gets its own workshop. Workshop 01 is the Auto Sorter, because nothing else on the map works until your library can be found in 4 seconds.</p>
         <ol class="steps">
           <li>Sort any Figma email library by brand, flow, category, language and year, on one canvas.</li>
@@ -75,7 +79,7 @@
   RM.TOOLS.forEach(function (t, i) {
     var d = document.createElement('div');
     d.className = 'tool card' + (i === 0 ? ' one' : '');
-    d.innerHTML = '<span class="n">TOOL ' + t.n + ' / 08</span><h3>' + t.name + '</h3><s>' + t.cut + '</s><p class="what">' + t.what + '</p>' + (t.ws ? '<a class="tag" href="#ws01">' + t.ws + '</a>' : '');
+    d.innerHTML = '<span class="n">TOOL ' + t.n + ' / 08</span><h3>' + t.name + '</h3><s>' + t.cut + '</s><p class="what">' + t.what + '</p>' + (i === 0 ? '<a class="tag" href="https://www.halloftemplates.com/sorter?utm_source=replacement-map&utm_medium=tool-01">Open the Auto Sorter · free</a><a class="tag" style="background:var(--ink);color:var(--sheet)" href="#ws01">Workshop 01</a>' : '<span class="n">Workshop ' + t.n + ' · coming</span>');
     box.appendChild(d);
   });
   // carry the lead source to the offer page for attribution

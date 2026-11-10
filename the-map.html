@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Replacement Map · Hall of Templates</title>
+<meta name="description" content="8 internal tools that replaced the expensive parts of an email design studio. What each one took, the rule it runs, and where to start.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<link rel="stylesheet" href="rm.css">
+<style>
+/* The map: one "replacement line" running top to bottom, 8 stations. Tool 01 is the only open station. */
+.sheet{max-width:880px;margin:0 auto;padding-block:48px 64px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--ink);padding-bottom:18px}
+.top h1{font-size:clamp(44px,7vw,84px)}
+.legend{display:flex;gap:14px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);background:var(--white)}
+.dot.live{background:var(--go);border-color:var(--go)}
+.intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;margin-top:26px}
+.intro p{color:var(--ink-2)}
+.line{position:relative;margin-top:40px;padding-left:56px}
+.line::before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:4px;background:var(--ink);border-radius:2px}
+.st{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:18px 0 22px;border-bottom:1px solid var(--rule)}
+.st::before{content:"";position:absolute;left:-46px;top:20px;width:22px;height:22px;border-radius:50%;background:var(--white);border:4px solid var(--ink)}
+.st.live::before{background:var(--go);border-color:var(--go);box-shadow:0 0 0 6px var(--go-bg)}
+.st .num{font:500 11px/1 var(--mono);letter-spacing:.12em;color:var(--ink-3);grid-column:1/-1}
+.st h2{font:400 32px/1.05 var(--display);letter-spacing:-.02em}
+.st .cut{font:500 12px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--cut);text-decoration:line-through;text-decoration-thickness:1.5px;align-self:center;white-space:nowrap}
+.st .rule{grid-column:1/-1;font-size:16px;color:var(--ink-2)}
+.st .rule b{color:var(--ink);font-weight:500}
+.st .go{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.st .go a{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:99px;padding:10px 14px;border:1px solid var(--ink)}
+.st .go a.p{background:var(--go);border-color:var(--go);color:#fff}
+.st .soon{grid-column:1/-1;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:4px}
+.qs{margin-top:44px;padding:28px}
+.qs h3{font:300 34px/1.1 var(--display)}
+.qs ol{margin:16px 0 0;padding-left:22px;display:grid;gap:8px;font-size:17px}
+.sig{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:36px;font:500 11px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.dl{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:640px){.intro{grid-template-columns:minmax(0,1fr)}.line{padding-left:44px}.st::before{left:-38px}.line::before{left:13px}.st{grid-template-columns:minmax(0,1fr)}.st .cut{justify-self:start}}
+@media print{@page{size:A4;margin:12mm}body{background:#fff}.dl,.noprint{display:none!important}.sheet{padding-block:0}.st{break-inside:avoid}.qs{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="wrap sheet">
+  <div class="top">
+    <div>
+      <p class="lab"><b>The Hall Of Templates</b> · Studio Apps · Nov 2026</p>
+      <h1 style="margin-top:12px">The Replacement <em>Map</em></h1>
+    </div>
+    <div class="legend"><span><i class="dot live"></i>Open now</span><span><i class="dot"></i>Workshop coming</span></div>
+  </div>
+
+  <div class="intro">
+    <p style="font-size:19px;color:var(--ink)">Eight tools that replaced the expensive parts of my own email design studio. Each one took a job I used to do by hand, and turned it into a rule a machine now runs every time.</p>
+    <p>Read the line top to bottom. Every station assumes the one above it exists. That is why the Auto Sorter is station 01: nothing below it works until your library can be found in 4 seconds.</p>
+  </div>
+  <div class="dl noprint">
+    <a class="btn line" style="width:auto" href="Replacement-Map.pdf" download>Download the PDF<small>&nbsp;A4</small></a>
+  </div>
+
+  <div class="line" id="line"></div>
+
+  <section class="card qs">
+    <p class="lab"><b>Before you build anything</b> · 3 questions, nobody watching</p>
+    <h3 style="margin-top:10px">Find your first station.</h3>
+    <ol>
+      <li>What do you do every week that you'd never put on a job post?</li>
+      <li>What would you be embarrassed to pay someone $40 an hour to do?</li>
+      <li>What do you open Figma for, then close without designing a thing?</li>
+    </ol>
+    <p style="margin-top:14px;color:var(--ink-2)">Whatever shows up in all three is your intern. For most studios, it's station 01.</p>
+  </section>
+
+  <div class="sig"><span>2,705 emails · 102 brands · 2026</span><span>Let the intern go first · DG</span></div>
+</main>
+<script>
+(function () {
+  var SORTER = 'https://www.halloftemplates.com/sorter?utm_source=replacement-map&utm_medium=station-01';
+  var WS = 'https://www.halloftemplates.com/sorter-pro?utm_source=replacement-map&utm_medium=station-01';
+  var S = [
+    ['01','The Auto Sorter','the intern','<b>Every email filed by brand, flow, category, language and year,</b> on one canvas. First real run: 832 templates in one pass. Gave back a week every time the library grew.', true],
+    ['02','The Presenter',"Friday's deck",'<b>One section per email, the brief beside it, the why under it.</b> The client review deck builds itself from the week.'],
+    ['03','The Shuffler','the first draft','<b>Only rows the client already approved.</b> Reorder, resize, swap copy and photos. No new elements.'],
+    ['04','The Gatekeeper','the second look','<b>Every layer checked before export.</b> One real file: 209 emails, 173 clean, 36 with the same mistake.'],
+    ['05','Brand X Ray','the brand audit','<b>Past sends become the library:</b> hero signatures, module families, what was used when.'],
+    ['06','The Capacity Manual','onboarding','<b>The rules your senior carries in their head, written down,</b> so a new hire ships on day one.'],
+    ['07','Studio Of One','the org chart','<b>Agents plan the week, build the emails and review them.</b> One human decides.'],
+    ['08','The Content Engine','the content team','<b>One idea in. Email, X, LinkedIn, carousel and video out,</b> in your own voice.']
+  ];
+  var box = document.getElementById('line');
+  S.forEach(function (s, i) {
+    var d = document.createElement('div');
+    d.className = 'st' + (s[4] ? ' live' : '');
+    d.innerHTML = '<span class="num">STATION ' + s[0] + ' / 08</span><h2>' + s[1] + '</h2><span class="cut">' + s[2] + '</span><p class="rule">' + s[3] + '</p>' +
+      (s[4] ? '<div class="go"><a class="p" href="' + SORTER + '">Open the Auto Sorter · free</a><a href="' + WS + '">Workshop 01 · $97</a></div>'
+            : '<span class="soon">Workshop ' + s[0] + ' · coming</span>');
+    box.appendChild(d);
+  });
+})();
+</script>
+</body>
+</html>
